@@ -1,1 +1,3 @@
-* FitUP
+# FitUP
+
+## Objetivo do Projeto
