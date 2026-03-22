@@ -23,8 +23,8 @@
         </div>
         <MudSpacer />
         @*Botões*@
-        <MudButton Class="mt-2 ms-2" Style="color:coral;font-weight: bold;" Size="Size.Small">Entrar</MudButton>
-        <MudButton Class="mt-2 ms-2" Style="color:coral; font-weight: bold" Size="Size.Small">Cadastrar</MudButton>
+        <MudButton Href="Login" Class="mt-2 ms-2" Style="color:coral;font-weight: bold;" Size="Size.Small">Entrar</MudButton>
+        <MudButton Href="Cadastrar" Class="mt-2 ms-2" Style="color:coral; font-weight: bold" Size="Size.Small">Cadastrar</MudButton>
 
         <MudIconButton Icon="@(DarkLightModeButtonIcon)" Style="color:coral;" Class="mt-2"OnClick="@DarkModeToggle" />
     </MudAppBar>
@@ -117,6 +117,7 @@
         DrawerBackground = "#ffffff",
         GrayLight = "#e8e8e8",
         GrayLighter = "#f9f9f9",
+        Warning = "#ff703d"
     };
 
     private readonly PaletteDark _darkPalette = new()
@@ -140,7 +141,7 @@
         GrayLighter = "#1e1e2d",
         Info = "#4a86ff",
         Success = "#3dcb6c",
-        Warning = "#ffb545",
+        Warning = "#ff703d",
         Error = "#ff3f5f",
         LinesDefault = "#33323e",
         TableLines = "#33323e",

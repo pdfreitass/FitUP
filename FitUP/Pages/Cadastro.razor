@@ -1,12 +1,11 @@
-﻿@page "/cadastro"
-@layout LoginLayout
+﻿@page "/cadastrar"
+@layout MainLayout
 @using System.ComponentModel.DataAnnotations
-
+<PageTitle>Cadastrar</PageTitle>
 <style>
     :root { --mud-palette-primary: #ff5a1f; --mud-palette-primary-hover: #ff703d; }
-    .reg-wrap { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f5f5f5; padding: 20px; }
-    .reg-card { border-radius: 8px; background: white !important; width: 100%; max-width: 750px; }
-    .mud-input > input.mud-input-root { color: #000 !important; }
+    .reg-wrap { display:flex; justify-content: center; }
+    .reg-card { border-radius: 8px; width: 100%; max-width: 750px; }
     
     .btn-pri { background: #ff5a1f !important; color: #fff !important; font-weight: 700; }
     
@@ -17,24 +16,24 @@
 </style>
 
 <div class="reg-wrap">
-    <MudPaper Elevation="4" Class="reg-card pa-10">
-        <div class="text-center mb-6">
-            <MudText Typo="Typo.h5" Style="font-weight:700">Crie sua conta pessoal</MudText>
-            <MudText Typo="Typo.body2" Class="mud-text-secondary">Confirmação enviada por e-mail.</MudText>
+    <MudPaper Elevation="4" Class="reg-card pa-10 ">
+        <div class="mb-6">
+            <MudText Align="Align.Center" Typo="Typo.h5" Style="font-weight:bold">Crie sua conta pessoal</MudText>
+            <MudText Align="Align.Center" Typo="Typo.body2" Class="mud-text-secondary" Color="Color.Default">Venha Fazer Parte do Nosso Time!</MudText>
         </div>
 
         <EditForm Model="@cadModel" OnValidSubmit="HandleCadastro">
             <DataAnnotationsValidator />
             <MudGrid Spacing="2">
-                <MudItem xs="12" sm="6"><MudTextField Label="Nome" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="cadModel.FirstName" For="@(()=>cadModel.FirstName)"/></MudItem>
-                <MudItem xs="12" sm="6"><MudTextField Label="Sobrenome" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="cadModel.LastName" For="@(()=>cadModel.LastName)"/></MudItem>
-                <MudItem xs="12" sm="6"><MudTextField Label="Nascimento" Variant="Variant.Outlined" Margin="Margin.Dense" InputType="InputType.Date" @bind-Value="cadModel.BirthDate"/></MudItem>
-                <MudItem xs="12" sm="6"><MudTextField Label="Telefone(Opcional)" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="cadModel.Phone"/></MudItem>
-                <MudItem xs="12"><MudTextField Label="CPF" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="cadModel.CPF" For="@(()=>cadModel.CPF)"/></MudItem>
-                <MudItem xs="12" sm="6"><MudTextField Label="E-mail" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="cadModel.Email" For="@(()=>cadModel.Email)"/></MudItem>
-                <MudItem xs="12" sm="6"><MudTextField Label="Confirmar E-mail" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="cadModel.ConfirmEmail" For="@(()=>cadModel.ConfirmEmail)"/></MudItem>
-                <MudItem xs="12" sm="6"><MudTextField Label="Senha" Variant="Variant.Outlined" Margin="Margin.Dense" InputType="InputType.Password" @bind-Value="cadModel.Password" For="@(()=>cadModel.Password)"/></MudItem>
-                <MudItem xs="12" sm="6"><MudTextField Label="Confirmar Senha" Variant="Variant.Outlined" Margin="Margin.Dense" InputType="InputType.Password" @bind-Value="cadModel.ConfirmPassword" For="@(()=>cadModel.ConfirmPassword)"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="Nome" Variant="Variant.Filled" Margin="Margin.Dense" @bind-Value="cadModel.FirstName" For="@(()=>cadModel.FirstName)"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="Sobrenome" Variant="Variant.Filled" Margin="Margin.Dense" @bind-Value="cadModel.LastName" For="@(()=>cadModel.LastName)"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="Nascimento" Variant="Variant.Filled" Margin="Margin.Dense" InputType="InputType.Date" @bind-Value="cadModel.BirthDate"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="Telefone(Opcional)" Variant="Variant.Filled" Margin="Margin.Dense" @bind-Value="cadModel.Phone"/></MudItem>
+                <MudItem xs="12"><MudTextField Label="CPF" Variant="Variant.Filled" Margin="Margin.Dense" @bind-Value="cadModel.CPF" For="@(()=>cadModel.CPF)"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="E-mail" Variant="Variant.Filled" Margin="Margin.Dense" @bind-Value="cadModel.Email" For="@(()=>cadModel.Email)"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="Confirmar E-mail" Variant="Variant.Filled" Margin="Margin.Dense" @bind-Value="cadModel.ConfirmEmail" For="@(()=>cadModel.ConfirmEmail)"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="Senha" Variant="Variant.Filled" Margin="Margin.Dense" InputType="InputType.Password" @bind-Value="cadModel.Password" For="@(()=>cadModel.Password)"/></MudItem>
+                <MudItem xs="12" sm="6"><MudTextField Label="Confirmar Senha" Variant="Variant.Filled" Margin="Margin.Dense" InputType="InputType.Password" @bind-Value="cadModel.ConfirmPassword" For="@(()=>cadModel.ConfirmPassword)"/></MudItem>
                 
                 <MudItem xs="12" Class="mt-2 text-center">
                     <MudText Typo="Typo.caption">Ao criar, aceita os <a href="#" class="orange-link">Termos</a> e <a href="#" class="orange-link">Privacidade</a>.</MudText>
