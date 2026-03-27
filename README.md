@@ -51,5 +51,24 @@
           <sub><b>Felipe Dario</b></sub>      
      </a>
     </td>
+    <td align="center">
+    <a>
+    <img src="https://avatars.githubusercontent.com/u/203004835?v=4"
+             width="150"
+             height="150"
+             style="object-fit: cover; border-radius: 50%;"
+             alt=""/><br>
+          <sub><b>Pedro Freitas</b></sub>
+      </a>
+      <td align="center">
+    <a>
+    <img src="https://avatars.githubusercontent.com/u/247213111?v=4"
+             width="150"
+             height="150"
+             style="object-fit: cover; border-radius: 50%;"
+             alt=""/><br>
+          <sub><b>Pedro Henrique</b></sub>
+      </a>
   </tr>  
 </table>
+
