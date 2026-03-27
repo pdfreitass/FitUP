@@ -6,7 +6,7 @@
 <MudSnackbarProvider />
 
 <MudLayout> 
-    <MudAppBar Elevation="0" Style="height: 70px" Color="Color.Transparent">
+    <MudAppBar Elevation="0" Style="height: 70px;background-color:transparent;backdrop-filter:blur(2px)">
         @*O menu so aparecera quando o site estiver na metade ou menor.*@
          <MudIconButton Class="d-flex d-md-none" Icon="@Icons.Material.Filled.Menu" Style="color:coral" Edge="Edge.Start" OnClick="@DrawerToggle" /> 
         
@@ -23,14 +23,14 @@
         </div>
         <MudSpacer />
         @*Botões*@
-        <MudButton Href="Login" Class="mt-2 ms-2" Style="color:coral;font-weight: bold;" Size="Size.Small">Entrar</MudButton>
-        <MudButton Href="Cadastrar" Class="mt-2 ms-2" Style="color:coral; font-weight: bold" Size="Size.Small">Cadastrar</MudButton>
+        <MudButton Href="Login" Class="mt-2 ms-2 d-md-inline-flex" Style="background-color:coral;font-weight: bold;" Size="Size.Small">Entrar</MudButton>
+        <MudButton Href="Cadastrar" Class="mt-2 ms-2 d-md-inline-flex" Style="background-color:coral; font-weight: bold" Size="Size.Small">Cadastrar</MudButton>
 
-        <MudIconButton Icon="@(DarkLightModeButtonIcon)" Style="color:coral;" Class="mt-2"OnClick="@DarkModeToggle" />
+        <MudIconButton Icon="@(DarkLightModeButtonIcon)" Style="color:coral" Class="mt-2"OnClick="@DarkModeToggle" />
     </MudAppBar>
 
     @*Função do menu de navegação onde ira aparecer quando tiver o botão Menu ativo. p*@
-    <MudDrawer  @bind-Open="_open" ClipMode="DrawerClipMode.Always" Elevation="0" Variant="@DrawerVariant.Temporary" Color="Color.Transparent">
+    <MudDrawer  @bind-Open="_open" ClipMode="DrawerClipMode.Always" Elevation="0" Variant="@DrawerVariant.Temporary" Style="background-color:transparent;backdrop-filter:blur(1px)">
         <NavMenu />
     </MudDrawer> 
     @*Imagem geral da pagina e responsivel nos tamanhos menores*@
@@ -117,7 +117,7 @@
         DrawerBackground = "#ffffff",
         GrayLight = "#e8e8e8",
         GrayLighter = "#f9f9f9",
-        Warning = "#ff703d"
+        Warning = "#ff703d",
     };
 
     private readonly PaletteDark _darkPalette = new()
