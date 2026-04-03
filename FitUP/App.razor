@@ -4,9 +4,24 @@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
-        <PageTitle>Não encontrado</PageTitle>
+        <PageTitle>Pagina não encontrada</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Desculpe, não há nada neste endereço.</p>
+            <MudGrid Justify="Justify.Center">
+            <div class="d-flex flex-column align-center mt-10 justify-center">
+                <style>
+                   .scale-hover:hover {
+                    transform: scale(1.05);
+                    transition: transform 0.3s ease-in-out
+                   }
+                </style>
+                <MudCard Elevation="12" Style="width: 280px; height:200px" Class="rounded-xl">
+                    <MudCardContent>
+                        <MudText Align="Align.Center" Style="font-weight:bold;" role="alert">Desculpe, não há nada neste endereço<br /> e se apareci, tem erro em alguma página.</MudText>
+                        <MudButton Href="/" Class="mt-7 transition-fast-out-slow-in scale-hover" Size="Size.Large" Style="width:100%; background-color:coral; font-weight:bold">Voltar</MudButton>
+                    </MudCardContent>
+                </MudCard>
+            </div>
+            </MudGrid>
         </LayoutView>
     </NotFound>
 </Router>

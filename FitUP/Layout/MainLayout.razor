@@ -6,7 +6,7 @@
 <MudSnackbarProvider />
 
 <MudLayout> 
-    <MudAppBar Elevation="0" Style="height: 70px;background-color:transparent;backdrop-filter:blur(2px)">
+    <MudAppBar Elevation="0" Style="height: 70px;background-color:transparent;backdrop-filter:blur(2px);">
         @*O menu so aparecera quando o site estiver na metade ou menor.*@
          <MudIconButton Class="d-flex d-md-none" Icon="@Icons.Material.Filled.Menu" Style="color:coral" Edge="Edge.Start" OnClick="@DrawerToggle" /> 
         
@@ -17,9 +17,9 @@
         </div>
         @*aqui é o inverso, os botões abaixo só aparecem quando a tela estiver maior e todos os botões tem os links das paginas. *@
         <div class="d-none d-md-inline-flex">
-        <MudButton Class="ms-14 mt-2"Size="Size.Small" Style="color:coral; font-weight: bold;" Href="MonteTreino">Monte o seu Treino</MudButton>
-        <MudButton Class="ms-6 mt-2" Size="Size.Small" Style="color:coral; font-weight: bold;" Href="DicasTreino">Dicas de Treino</MudButton>
-        <MudButton Class="ms-6 mt-2" Size="Size.Small" Style="color:coral; font-weight: bold;" Href="weather">Ganho Máximo</MudButton>
+        <MudButton Class="ms-9 mt-2"Size="Size.Small" Style="color:coral; font-weight:900;" Href="MonteTreino">Monte o seu Treino</MudButton>
+        <MudButton Class="ms-7 mt-2" Size="Size.Small" Style="color:coral; font-weight:900;" Href="DicasTreino">Dicas de Treino</MudButton>
+        <MudButton Class="ms-7 mt-2" Size="Size.Small" Style="color:coral; font-weight: 900;" Href="weather">Ganho Máximo</MudButton>
         </div>
         <MudSpacer />
         @*Botões*@
@@ -34,7 +34,7 @@
         <NavMenu />
     </MudDrawer> 
     @*Imagem geral da pagina e responsivel nos tamanhos menores*@
-    <MudMainContent Style="background: url('/Home.png');background:cover; background-attachment:fixed; display: flex; flex-direction: column; min-height:100vh; ">
+    <MudMainContent Style="background: url('img/Home.png');background:cover; background-attachment:fixed; display: flex; flex-direction: column; min-height:100vh; ">
 
         <div style="flex-grow: 1">
             @Body

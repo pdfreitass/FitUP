@@ -9,18 +9,19 @@
     <link rel="preload" id="webassembly" />
     <link rel="stylesheet" href="_content/MudBlazor/MudBlazor.min.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="icon" type="image/png" href="Logo32.png" />
+    <link rel="icon" type="image/png" href="img/Logo32.png" />
     <link href="FitUP.styles.css" rel="stylesheet" />
     <script type="importmap"></script>
 </head>
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+        <div class="loading-wrapper">
+            <span class="loading-progress-text">Carregando...</span>
+            <div class="loading-progress-container">
+            <div class="loading-progress-bar"></div>
+        </div>
+       </div>
     </div>
 
     <div id="blazor-error-ui">

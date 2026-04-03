@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    background-color: #323233
 }
 
 #blazor-error-ui {
@@ -62,49 +63,54 @@ html, body {
         content: "An error has occurred."
     }
 
-.loading-progress {
-    position: absolute;
-    display: block;
-    width: 8rem;
-    height: 8rem;
-    inset: 20vh 0 auto 0;
-    margin: 0 auto 0 auto;
+/* Contêiner principal que alinha o texto e a barra lado a lado */
+.loading-wrapper {
+    display:flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente na tela */
+    gap: 12px; /* Espaço entre o texto e a barra */
+    margin: 400px auto; /* Margem externa */
 }
 
-    .loading-progress circle {
-        fill: none;
-        stroke: #e0e0e0;
-        stroke-width: 0.6rem;
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);
-    }
-
-        .loading-progress circle:last-child {
-            stroke: #594AE2;
-            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-            transition: stroke-dasharray 0.05s ease-in-out;
-        }
-
+/* O texto */
 .loading-progress-text {
-    position: absolute;
-    text-align: center;
+    font-family: Arial;
+    color: white;
+    font-size: 25px;
     font-weight: bold;
-    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+    white-space: nowrap; /* Impede que o texto quebre de linha */
 }
 
-    .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
+/* Container de fundo da barra */
+.loading-progress-container {
+    width: 100%;
+    max-width: 300px; /* Reduzi um pouco a largura para equilibrar com o texto */
+    height: 25px;
+    background-color: #323233;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* A barra de progresso coral */
+.loading-progress-bar {
+    height: 100%;
+    background-color: coral;
+    border-radius: 8px;
+    width: 0%;
+    animation: loading-fill 2s infinite ease-in-out;
+}
+
+/* Animação de vai e vem */
+@keyframes loading-fill {
+    0% {
+        width: 0%;
     }
 
-code {
-    color: #c02d76;
-}
+    50% {
+        width: 100%;
+    }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-    color: var(--bs-secondary-color);
-    text-align: end;
-}
-
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-    text-align: start;
+    100% {
+        width: 100%;
+    }
 }
