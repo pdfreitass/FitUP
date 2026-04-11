@@ -34,7 +34,7 @@
         <NavMenu />
     </MudDrawer> 
     @*Imagem geral da pagina e responsivel nos tamanhos menores*@
-    <MudMainContent Style="background: url('img/Home.png');background:cover; background-attachment:fixed; display: flex; flex-direction: column; min-height:100vh; ">
+    <MudMainContent Style="@($"background: url('{(_isDarkMode ? _backgroundImageDark : _backgroundImageLight)}'); background: cover; background-attachment: fixed; display: flex; flex-direction: column; min-height: 100vh;")">
 
         <div style="flex-grow: 1">
             @Body
@@ -82,6 +82,9 @@
     private bool _open = false;
     private bool _isDarkMode = true;
     private MudTheme? _theme;
+
+    private string _backgroundImageDark = "img/Home.png";
+    private string _backgroundImageLight = "img/HomeL.png";
 
     protected override void OnInitialized()
     {
