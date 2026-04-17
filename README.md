@@ -28,7 +28,7 @@
              height="150"
              style="object-fit: cover; border-radius: 50%;"
              alt=""/><br>
-          <sub><b>Ian Carlos</b></sub>
+          <sub><b>Ian Carlos como DEV</b></sub>
       </a>
      </td>
     <td align="center">
@@ -38,7 +38,7 @@
             height="150"
             style="object-fit: cover; border-radius: 50%;"
             alt=""/><br>
-          <sub><b>Thauã Cerqueira</b></sub>
+          <sub><b>Thauã Cerqueira como DEV</b></sub>
       </a>
     </td>
     <td align="center">
@@ -48,7 +48,7 @@
           height="150"
           style="object-fit: fill; border-radius: 50%;"
           alt=""/><br>
-          <sub><b>Felipe Dario</b></sub>      
+          <sub><b>Felipe Dario como SM</b></sub>      
      </a>
     </td>
     <td align="center">
@@ -58,7 +58,7 @@
              height="150"
              style="object-fit: cover; border-radius: 50%;"
              alt=""/><br>
-          <sub><b>Pedro Freitas</b></sub>
+          <sub><b>Pedro Freitas como QA </b></sub>
       </a>
       <td align="center">
     <a>
@@ -67,7 +67,7 @@
              height="150"
              style="object-fit: cover; border-radius: 50%;"
              alt=""/><br>
-          <sub><b>Pedro Henrique</b></sub>
+          <sub><b>Pedro Henrique como PO</b></sub>
       </a>
   </tr>  
 </table>
